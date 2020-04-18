@@ -17,5 +17,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/rss-channel/{id}', 'RssChannelController@getChannel');
+Route::get('/rss-channel/{id}', 	'RssChannelController@getChannel');
+Route::put('/rss-channel/{id}', 	'RssChannelController@putChannel');
+Route::post('/rss-channel', 		'RssChannelController@postChannel');
+Route::delete('/rss-channel/{id}',	'RssChannelController@deleteChannel');
+
 Route::get('/rss-feed/all', 'RssFeedController@getAllFeeds');

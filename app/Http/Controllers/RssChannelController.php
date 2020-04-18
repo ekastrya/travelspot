@@ -14,4 +14,48 @@ class RssChannelController extends Controller
     		return response()->json(RssChannel::find($id));
     	} 
     }
+
+	public function putChannel(Request $request, $id) {
+		$this->validate($request,	[ 'last_build_date' => 'required'
+									, 'description' => 'required'
+									, 'status' => 'required'
+									, 'title' => 'required'
+									, 'link' => 'required'
+									]);
+
+		$channel = RssChannel::find($id);
+		$channel->last_build_date = $request->last_build_date;
+		$channel->description = $request->description;
+		$channel->status = $request->status;
+		$channel->title = $request->title;
+		$channel->link = $request->link;
+		$channel->save();
+
+		return response(null, 204);
+	}
+
+	public function postChannel(Request $request) {
+		$this->validate($request,	[ 'last_build_date' => 'required'
+									, 'description' => 'required'
+									, 'status' => 'required'
+									, 'title' => 'required'
+									, 'link' => 'required'
+									]);
+
+		$channel = new RssChannel;
+		$channel->last_build_date = $request->last_build_date;
+		$channel->description = $request->description;
+		$channel->status = $request->status;
+		$channel->title = $request->title;
+		$channel->link = $request->link;
+		$channel->save();
+
+		return response(null, 201);
+	}
+
+	public function deleteChannel(Request $request, $id) {
+		$channel = RssChannel::find($id);
+		$channel->delete();
+		return response(null, 204);
+	}
 }

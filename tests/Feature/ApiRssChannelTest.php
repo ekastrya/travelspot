@@ -31,9 +31,36 @@ class ApiRssChannelTest extends TestCase
     
     // public function test_can_search_channel_by_keyword_across_all_fields(){}
     
-    // public function test_can_create_new_channel_record(){}
+    public function test_can_create_new_channel_record()
+    {
+        $channel = factory(RssChannel::class)->make();
+        $this->json('POST', '/api/rss-channel', [ 'last_build_date' => $channel->last_build_date->format('Y-m-d H:i:s')
+                                                , 'description' => $channel->description
+                                                , 'status' => $channel->status
+                                                , 'title' => $channel->title
+                                                , 'link' => $channel->link
+                                                ])
+             ->assertStatus(201);
+    }
     
-    // public function test_can_update_channel_record(){}
+    public function test_can_update_channel_record()
+    {
+        $channel1 = factory(RssChannel::class)->create();
+        $channel2 = factory(RssChannel::class)->make();
+        $this->json('POST', '/api/rss-channel/' . $channel1->id, [ 'last_build_date' => $channel2->last_build_date->format('Y-m-d H:i:s')
+                                                                 , 'description' => $channel2->description
+                                                                 , 'status' => $channel2->status
+                                                                 , 'title' => $channel2->title
+                                                                 , 'link' => $channel2->link
+                                                                 , '_method' => 'PUT'
+                                                                 ])
+             ->assertStatus(204);
+    }
     
-    // public function test_can_delete_channel_record(){}
+    public function test_can_delete_channel_record()
+    {
+        $channel = factory(RssChannel::class)->create();
+        $this->json('POST', '/api/rss-channel/' . $channel->id, ['_method' => 'DELETE'])
+             ->assertStatus(204);
+    }
 }
