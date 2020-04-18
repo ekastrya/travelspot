@@ -17,5 +17,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/rss-channel/all', 'RssChannelController@getAllChannels');
+Route::get('/rss-channel/{id}', 'RssChannelController@getChannel');
 Route::get('/rss-feed/all', 'RssFeedController@getAllFeeds');
