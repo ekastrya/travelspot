@@ -19,7 +19,7 @@
                                 <tr v-for="(row, index) in rssFeeds">
                                     <td>{{ index+1 }}</td>
                                     <td>
-                                        {{ row.rss_channel_id }}:<br>
+                                        Dilansir dari {{ row.channel.title }}:<br>
                                         {{ row.title }}
                                     </td>
                                     <td>{{ (row.status==1?"Aktif":"Tidak aktif") }}</td>
