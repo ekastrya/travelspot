@@ -24,7 +24,7 @@
                                     </td>
                                     <td>{{ (row.status==1?"Aktif":"Tidak aktif") }}</td>
                                     <td>
-                                        <a href="row.link">Visit</a>
+                                        <a :href="row.link">Visit</a>
                                     </td>
                                 </tr>
                             </tbody>
