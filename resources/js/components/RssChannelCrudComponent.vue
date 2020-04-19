@@ -97,9 +97,10 @@
         },
         methods: {
             retrieveChannel: function(id){
+                let self = this
                 axios.get('/api/rss-channel/' + id)
                     .then(function (response) {
-                        this.rssChannels = response.data
+                        self.rssChannels = response.data
                     })
                     .catch(function (error) {
                         alert(error)
