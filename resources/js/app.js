@@ -21,6 +21,7 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('rss-channel-crud', require('./components/RssChannelCrudComponent.vue').default);
+Vue.component('rss-feed-crud', require('./components/RssFeedCrudComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

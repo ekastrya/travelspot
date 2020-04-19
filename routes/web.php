@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/rss-channel', 'Web\RssChannelController@index')->name('rss-channels');
+Route::get('/rss-feed', 'Web\RssFeedController@index')->name('rss-feeds');

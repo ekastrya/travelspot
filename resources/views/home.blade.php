@@ -21,7 +21,7 @@
                             <a href="/rss-channel">RSS Channel</a>
                         </li>
                         <li>
-                            <a href="/rss-channel">RSS Feed</a>
+                            <a href="/rss-feed">RSS Feed</a>
                         </li>
                     </ul>
                 </div>
