@@ -35,20 +35,23 @@ class RssChannelController extends Controller
 	}
 
 	public function postChannel(Request $request) {
-		$this->validate($request,	[ 'last_build_date' => 'required'
-									, 'description' => 'required'
+		$this->validate($request,	[ 'description' => 'required'
 									, 'status' => 'required'
 									, 'title' => 'required'
 									, 'link' => 'required'
+									//'last_build_date' => 'required'
 									]);
 
 		$channel = new RssChannel;
-		$channel->last_build_date = $request->last_build_date;
-		$channel->description = $request->description;
-		$channel->status = $request->status;
-		$channel->title = $request->title;
-		$channel->link = $request->link;
 		$channel->save();
+
+		factory(RssChannel::class)->create([			
+			// 'last_build_date' => $request->last_build_date,
+			'description' => $request->description,
+			'status' => $request->status,
+			'title' => $request->title,
+			'link' => $request->link
+		]);
 
 		return response(null, 201);
 	}
