@@ -42,9 +42,6 @@ class RssChannelController extends Controller
 									//'last_build_date' => 'required'
 									]);
 
-		$channel = new RssChannel;
-		$channel->save();
-
 		factory(RssChannel::class)->create([			
 			// 'last_build_date' => $request->last_build_date,
 			'description' => $request->description,
