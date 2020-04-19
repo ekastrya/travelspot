@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class RssFeed extends Model
 {
     public function channel() {
-    	return $this->belongsTo(RssChannel::class);
+    	return $this->belongsTo(RssChannel::class,'rss_channel_id');
     }
 }
