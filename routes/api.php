@@ -22,4 +22,6 @@ Route::put('/rss-channel/{id}', 	'RssChannelController@putChannel');
 Route::post('/rss-channel', 		'RssChannelController@postChannel');
 Route::delete('/rss-channel/{id}',	'RssChannelController@deleteChannel');
 
-Route::get('/rss-feed/all', 'RssFeedController@getAllFeeds');
+Route::get('/rss-feed/{id}', 	'RssFeedController@getFeed');
+Route::put('/rss-feed/{id}', 	'RssFeedController@putFeed');
+Route::delete('/rss-feed/{id}',	'RssFeedController@deleteFeed');
