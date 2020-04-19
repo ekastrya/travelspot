@@ -9,9 +9,9 @@ class RssFeedController extends Controller
 {
     public function getFeed($id) {
     	if(strtolower($id) == 'all'){
-    		return response()->json(RssFeed::all());
+    		return response()->json(RssFeed::with('channel')->get());
     	} else {
-    		return response()->json(RssFeed::find($id));
+    		return response()->json(RssFeed::with('channel')->where('id', $id)->first());
     	} 
     }
 
