@@ -93,14 +93,13 @@
             }
         },
         mounted() {
-            this.retrieveChannel(this.$event, 'all');
+            this.retrieveChannel('all');
         },
         methods: {
-            retrieveChannel: function(event, id){
-                let self = this;
+            retrieveChannel: function(id){
                 axios.get('/api/rss-channel/' + id)
                     .then(function (response) {
-                        self.rssChannels = response.data
+                        this.rssChannels = response.data
                     })
                     .catch(function (error) {
                         alert(error)
@@ -117,16 +116,16 @@
                 )
                 .then(function (response) {
                     alert(response.status)
+                    this.retrieveChannel('all');
                 })
                 .catch(function (error) {
                     alert(error.response.status)
                 });
             },
             deleteChannel: function(event, id){
-                let self = this;
                 axios.post('/api/rss-channel/'+id, {"_method": "delete"})
                 .then(function (response) {
-                    self.retrieveChannel()
+                    this.retrieveChannel('all');
                 })
                 .catch(function (error) {
                     alert(error.response.status)
