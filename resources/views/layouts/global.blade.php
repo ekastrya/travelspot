@@ -111,7 +111,7 @@
             <div class="site">
                 <div class="side-menu hidden-md-up">
                     <div class="side-menu__guest">
-                        <p class="side-menu__guest-title">PIXXIE</p>
+                        <p class="side-menu__guest-title">TravelSpot</p>
                         @if(\Auth::check())
                             @if(\Auth::user()->role->slug == 'client')
                             <span class="side-menu__guest-text">Kamu login sebagai {{\Auth::user()->client->fullname}}</span>
@@ -131,15 +131,12 @@
                                 {{ csrf_field() }}
                             </form>
                         @else
-                        <span class="side-menu__guest-text">Daftar sekarang dan abadikan momen indahmu</span>
+                        <span class="side-menu__guest-text">Daftar sekarang dan dapatkan info travel terkini</span>
                         <a class="side-menu__sign-up-link" href="/register">
                             <div class="side-menu__sign-up-button">Daftar</div>
                         </a>
                         <span class="side-menu__guest-text">Sudah punya akun? <a class="side-menu__guest-text-link" href="/login">Log In di sini</a></span>
                         @endif
-                    </div>
-                    <div class="side-menu__navbar hidden-md-up">
-                        <div class="nav-links"><a class="nav-link active" href="{{url('/')}}">HOME</a><a class="nav-link " href="{{url('/how-it-works')}}">HOW IT WORKS</a><a class="nav-link " href="{{url('/harga')}}">HARGA</a><a class="nav-link " href="{{url('/about')}}">TENTANG KAMI</a></div>
                     </div>
                 </div>
                 
