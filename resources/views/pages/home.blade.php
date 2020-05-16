@@ -3,7 +3,7 @@
 @section('content')
 	<div class="site__home">
         <div class="site__home-hero">
-            <div class="site__home-hero-image-container overlay-gradient"><img srcset="{{asset('img/jumbotron-image.jpg')}}" class="site__home-hero-image" src="{{asset('img/jumbotron-image-smaller.jpg')}}" alt="3a5bf9b1 a389 4d69 a29f e2d54a67a5dc" /></div>
+            <div class="site__home-hero-image-container overlay-gradient"><img srcset="/img/jumbotron-image.jpg" class="site__home-hero-image" src="/img/jumbotron-image-smaller.jpg" alt="3a5bf9b1 a389 4d69 a29f e2d54a67a5dc" /></div>
             <div class="container">
                 <div class="hero__caption">
                     <h1 class="hero__title" style="font-size: 30px;">HARGA MULAI DARI Rp 600.000</h1>
