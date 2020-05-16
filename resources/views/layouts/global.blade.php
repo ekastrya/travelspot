@@ -94,7 +94,7 @@
         content:"» ";
         }
         </style>
-        <link rel="stylesheet" media="all" href="{{asset('css/application-f14593bf0fe46e6a9ecb01a27baad8f94a512fecabd06329c78f87f245c1ca93.css')}}" />
+        <link rel="stylesheet" media="all" href="/css/application-f14593bf0fe46e6a9ecb01a27baad8f94a512fecabd06329c78f87f245c1ca93.css" />
         @section('headscript')
         @show
     </head>
@@ -148,7 +148,7 @@
 
             @include('layouts.footer')
 
-            <script src="{{asset('js/application-f338a7c1ba270ed5f3a1304b1733d41ad7a375563b2d8abe3e41ade68828e8b2.js')}}"></script><script>
+            <script src="/js/application-f338a7c1ba270ed5f3a1304b1733d41ad7a375563b2d8abe3e41ade68828e8b2.js"></script><script>
                 window.sweetescape = window.sweetescape || {}
                 window.sweetescape.variables = window.sweetescape.variables || {}
                 

@@ -21,13 +21,13 @@
                     <div class="burger-item"></div>
                 </div>
             </label>
-            <div class="logo1" style="padding-top: 12px"><a href="/"><img class="logo1" src="{{asset('img/logo.jpeg')}}" alt="Logo" height="25" /></a></div>
+            <div class="logo1" style="padding-top: 12px"><a href="/"><img class="logo1" src="/img/logo.jpeg" alt="Logo" height="25" /></a></div>
         </div>
     </div>
     <div class="hidden-sm-down">
         <div class="nav-large">
-            <div class="logo-large"><a href="/"><img src="{{asset('img/logo.jpeg')}}" alt="Logo" /></a></div>
-            <div class="nav-links"><a class="nav-link active" href="{{url('/')}}">HOME</a></div>
+            <div class="logo-large"><a href="/"><img src="/img/logo.jpeg" alt="Logo" /></a></div>
+            <div class="nav-links"><a class="nav-link active" href="/">HOME</a></div>
             <div class="auth-links">
                 @if(\Auth::check() && \Auth::user()->role->slug == 'client')
                 <a class="auth-link" href="{{route('client.home')}}">{{\Auth::user()->client->fullname}}</a>
