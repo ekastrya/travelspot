@@ -9,6 +9,7 @@
            <div class="destination-image"><img src="{!! $dest['image_url'] !!}" /></div>
            <div class="destination-title text-center">{{ $dest['title'] }}</div>
            <div class="destination-price text-center">{{ $dest['price'] }}</div>
+           <div class="text-center"><a href="{{ route('payment.checkout',['image'=>$dest['image_url'],'title'=>$dest['title'],'price'=>$dest['price']]) }}">Pesan sekarang</a></div>
          </div>
          @endforeach
       </div>

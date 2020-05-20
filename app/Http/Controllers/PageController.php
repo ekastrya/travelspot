@@ -20,7 +20,7 @@ class PageController extends Controller
 
 		foreach( $crawler->filter('div.product-price_currency') as $key => $price) { 
 			// print_r($title);
-			$array[$key]['price'] = $title->textContent;
+			$array[$key]['price'] = $price->textContent;
 		};
 
 		// $crawler->filter('div.product-price_currency')->each(function($price,$key) { 

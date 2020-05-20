@@ -30,7 +30,7 @@
             <div class="nav-links"><a class="nav-link active" href="/">HOME</a></div>
             <div class="auth-links">
                 @if(\Auth::check() && \Auth::user()->role->slug == 'client')
-                <a class="auth-link" href="{{route('client.home')}}">{{\Auth::user()->client->fullname}}</a>
+                <a class="auth-link" href="{{route('client.home')}}">{{-- \Auth::user()->client->fullname --}}{{auth()->user()->name}}</a>
                 <a class="auth-link" href="{{route('logout')}}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Log out</a><form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
