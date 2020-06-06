@@ -10,6 +10,7 @@
            <div class="destination-title text-center">{{ $dest['title'] }}</div>
            <div class="destination-price text-center">{{ $dest['price'] }}</div>
            <div class="text-center"><a href="{{ route('payment.checkout',['image'=>$dest['image_url'],'title'=>$dest['title'],'price'=>$dest['price']]) }}">Pesan sekarang</a></div>
+           <div class="text-center"><a class="btn btn-sm btn-primary" href="{{ route('compare.add',['title'=>$dest['title']]) }}">Bandingkan</a></div>
          </div>
          @endforeach
       </div>

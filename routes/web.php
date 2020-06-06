@@ -32,3 +32,6 @@ Route::get('/payment/checkout', 'PaymentController@getCheckout')->name('payment.
 
 Route::get('/client/home', function(){})->name('client.home');
 Route::get('/admin/dashboard', function(){})->name('admin.dashboard');
+Route::get('/compare/add', 'ComparisonController@addPackage')->name('compare.add');
+Route::get('/compare/clear', 'ComparisonController@clearComparison')->name('compare.clear');
+Route::get('/compare/result', 'ComparisonController@getResult')->name('compare.result');
