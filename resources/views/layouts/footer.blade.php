@@ -2,7 +2,7 @@
     <div class="footer-top">
         <div class="container" style="background-color: #444444;">
             <div class="row">
-                <div class="footer-links col-md-8">{{-- <a class="footer-link" href="/faq">FAQ</a><a class="footer-link" href="/privacy-policy">PRIVACY POLICY</a><a class="footer-link" href="/request-city">REQUEST CITY</a><a class="footer-link" href="/contact-us">CONTACT US</a> --}}</div>
+                <div class="footer-links col-md-8">{{session('p1')}}{{session('p2')}}{{-- <a class="footer-link" href="/faq">FAQ</a><a class="footer-link" href="/privacy-policy">PRIVACY POLICY</a><a class="footer-link" href="/request-city">REQUEST CITY</a><a class="footer-link" href="/contact-us">CONTACT US</a> --}}</div>
                 <div class="footer-join col-md-4"></div>
             </div>
         </div>
