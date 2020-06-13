@@ -41,7 +41,7 @@ class ComparisonController extends Controller
 
 		foreach( $crawler->filter('div.product-price_currency') as $key => $price) { 
 			// print_r($title);
-			$array[$key]['price'] = $price->textContent;
+			$array[$key]['price'] = substr($price->textContent,4,4);
 		};
 
 		// $crawler->filter('div.product-price_currency')->each(function($price,$key) { 
