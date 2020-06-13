@@ -7,20 +7,20 @@
 			@foreach($destinations as $key => $dest)
 				@if($key % 4 == 0)
 				<div class="px-2 mb-8">
-					<div class="flex -mx-2">
+					<div class="flex -mx-2 h-full">
 				@endif
 						<div class="w-full w-md-1/4 px-2">
-<div class="max-w-sm rounded overflow-hidden shadow-lg">
+<div class="max-w-sm h-full rounded overflow-hidden shadow-lg">
   <img class="w-full" src="{!! $dest['image_url'] !!}" alt="Sunset in the mountains">
-  <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2 h-16">{{ $dest['title'] }}</div>
-    <p class="text-gray-700 text-base">
-      Rp. {{ $dest['price'] }}
-    </p>
-  </div>
   <div class="px-6 py-4">
     <a href="" class="w-full text-center inline-block bg-blue-900 rounded-full px-3 py-1 text-sm font-semibold text-gray-100 mr-2 mb-2">Pesan Sekarang</a>
     <a href="" class="w-full text-center inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Bandingkan</a>
+  </div>
+  <div class="px-6 py-4">
+    <p class="text-gray-700 text-base">
+      Rp. {{ $dest['price'] }}
+    </p>
+    <div class="font-bold text-xl mb-2">{{ $dest['title'] }}</div>
   </div>
 </div>
 						</div>
