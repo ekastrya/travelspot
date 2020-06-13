@@ -11,6 +11,7 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content="IE=edge" http-equiv="X-UA-Compatible" />
         <meta content="#ffffff" name="theme-color" />
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet" />
         @section('headscriptbefore')
