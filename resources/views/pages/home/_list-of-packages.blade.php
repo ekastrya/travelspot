@@ -13,14 +13,14 @@
 <div class="max-w-sm h-full rounded overflow-hidden shadow-lg">
   <img class="w-full" src="{!! $dest['image_url'] !!}" alt="Sunset in the mountains">
   <div class="px-6 py-4">
-    <a href="" class="w-full text-center inline-block bg-blue-900 rounded-full px-3 py-1 text-sm font-semibold text-gray-100 mr-2 mb-2">Pesan Sekarang</a>
-    <a href="" class="w-full text-center inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Bandingkan</a>
+    <a href="{{ route('payment.checkout',['image'=>$dest['image_url'],'title'=>$dest['title'],'price'=>$dest['price']]) }}" class="w-full text-center inline-block bg-blue-900 rounded-full px-3 py-1 text-sm font-semibold text-gray-100 mr-2 mb-2">Pesan Sekarang</a>
+    <a href="{{ route('compare.add',['title'=>$dest['title']]) }}" class="w-full text-center inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Bandingkan</a>
   </div>
   <div class="px-6 py-4">
-    <p class="text-gray-700 text-base">
-      Rp. {{ $dest['price'] }}
+    <p class="text-gray-700 text-base text-center">
+      {{ $dest['price'] }}
     </p>
-    <div class="font-bold text-xl mb-2">{{ $dest['title'] }}</div>
+    <div class="font-bold text-xl mb-2 text-center">{{ $dest['title'] }}</div>
   </div>
 </div>
 						</div>
