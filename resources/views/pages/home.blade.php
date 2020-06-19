@@ -36,21 +36,21 @@
                 <div class="hiw__steps">
                     <div class="col-md-4">
                         <div class="hiw__step-item">
-                            <img data-src="{ {asset('img/hiw/step-1.png')} }" class="b-lazy " src="{ {asset('img/hiw/step-1.png')} }" />
+                            <img data-src="{ { secure_asset('img/hiw/step-1.png')} }" class="b-lazy " src="{ { secure_asset('img/hiw/step-1.png')} }" />
                             <h3>Pesan</h3>
                             <p style="text-align: center">Pilih kota &amp; jenis event</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="hiw__step-item">
-                            <img data-src="{ {asset('img/hiw/step-2.png')} }" class="b-lazy " src="{ {asset('img/hiw/step-2.png')} }" />
+                            <img data-src="{ { secure_asset('img/hiw/step-2.png')} }" class="b-lazy " src="{ { secure_asset('img/hiw/step-2.png')} }" />
                             <h3>Foto</h3>
                             <p style="text-align: center">Fotografer lokal yang akan<br />mengabadikan event kamu</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="hiw__step-item">
-                            <img data-src="{ {asset('img/hiw/step-3.png')} }" class="b-lazy " src="{ {asset('img/hiw/step-3.png')} }" />
+                            <img data-src="{ { secure_asset('img/hiw/step-3.png')} }" class="b-lazy " src="{ { secure_asset('img/hiw/step-3.png')} }" />
                             <h3>Download</h3>
                             <p style="text-align: center">Dalam 3 hari kerja kamu dapat memilih &amp; download foto yang sudah diedit</p>
                         </div>
@@ -67,7 +67,7 @@
 
 @section('headscriptbefore')
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" media="all" href="{{asset('css/snappr.css')}}" />
+<link rel="stylesheet" media="all" href="{{ secure_asset('css/snappr.css')}}" />
 <style type="text/css">
 h1{color:white}
 .snappr-new-section-heading{color: #212121;}
@@ -102,8 +102,8 @@ h1{color:white}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="{{asset('js/snappr.js')}}"></script>
-<script src="{{asset('slick/slick.js')}}" type="text/javascript" charset="utf-8"></script>
+<script src="{{ secure_asset('js/snappr.js')}}"></script>
+<script src="{{ secure_asset('slick/slick.js')}}" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 $(document).on('ready', function() {
   $(".regular").slick({
