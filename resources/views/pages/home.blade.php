@@ -75,8 +75,8 @@ h1{color:white}
 @endsection
 
 @section('headscript')
-  <link rel="stylesheet" type="text/css" href="{{asset('slick/slick.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{asset('slick/slick-theme.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ secure_asset('slick/slick.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ secure_asset('slick/slick-theme.css')}}">
   <style>
     .kartu{
       border:1px solid #d3d8dc;
