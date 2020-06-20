@@ -28,6 +28,7 @@
         <div class="nav-large">
             <div class="logo-large"><a href="/"><img src="/img/logo.jpeg" alt="Logo" /></a></div>
             <div class="nav-links"><a class="nav-link active" href="/">HOME</a></div>
+            <div class="nav-links"><a class="nav-link active" href="{{route('guestbook.create')}}">BUKU TAMU</a></div>
             <div class="auth-links">
                 @if(\Auth::check() && \Auth::user()->role->slug == 'client')
                 <a class="auth-link" href="{{route('client.home')}}">{{-- \Auth::user()->client->fullname --}}{{auth()->user()->name}}</a>
