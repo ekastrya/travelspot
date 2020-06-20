@@ -102,6 +102,13 @@
 		<div class="site__hiw">
 			<div class="site__hiw-header">
 				<h1 class="site__hiw-header-title">Daftar Tamu</h1>
+				
+				@if (session('message'))
+				<p class="text-center">
+				{{ session('message') }}
+				</p>
+				@endif
+				
 				<table class="table table-bordered">
 					<thead>
 						<tr>
