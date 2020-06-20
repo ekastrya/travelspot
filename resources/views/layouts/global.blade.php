@@ -138,6 +138,7 @@
                         </a>
                         <span class="side-menu__guest-text">Sudah punya akun? <a class="side-menu__guest-text-link" href="/login">Log In di sini</a></span>
                         @endif
+                        <p><a href="{{ route('guestbook.create') }}">Buku Tamu</a></p>
                     </div>
                 </div>
                 
