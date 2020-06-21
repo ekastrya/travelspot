@@ -25,7 +25,7 @@ class GuestBookController extends Controller
     public function create()
     {
         return view('pages.guestbook.create',[
-            'guests' => GuestBook::paginate(10)
+            'guests' => GuestBook::orderBy('id','DESC')->paginate(10)
         ]);
     }
 
