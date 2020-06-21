@@ -133,10 +133,13 @@
 							<td>{{ $guest->opinion }}</td>
 						</tr>
 						@endforeach
+						<tr>
+							<td colspan="5">
+								{{ $guests->links() }}			
+							</td>
+						</tr>
 					</tbody>
 				</table>
-
-				<div>{{ $guests->links() }}</div>
 			</div>
 		<p>&nbsp;</p>
 		</div>
