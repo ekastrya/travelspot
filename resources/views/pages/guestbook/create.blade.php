@@ -135,6 +135,8 @@
 						@endforeach
 					</tbody>
 				</table>
+
+				{{ $guests->links() }}
 			</div>
 		<p>&nbsp;</p>
 		</div>
