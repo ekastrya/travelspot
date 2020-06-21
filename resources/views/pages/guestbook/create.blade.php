@@ -136,7 +136,7 @@
 					</tbody>
 				</table>
 
-				{{ $guests->links() }}
+				<div>{{ $guests->links() }}</div>
 			</div>
 		<p>&nbsp;</p>
 		</div>
