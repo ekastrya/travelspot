@@ -16,6 +16,7 @@ class UsersTableSeeder extends Seeder
         $superAdmin->password 	= bcrypt('password');
         $superAdmin->email		= 'admin@travelspot.id';
         $superAdmin->name		= 'Agus Ma\'ruf';
+        $superAdmin->role_id	= 1;
         $superAdmin->save();
     }
 }
