@@ -4,7 +4,7 @@
             <div class="top-banner">
                 <div class="row">
                     <div class="col-xs-10">
-                        <img class="top-banner__icon" src="{ {asset('img/logo-white.png')} }" alt="Logo white" height="25" />
+                        <img class="top-banner__icon" src="{ {asset('img/logo-md.png')} }" alt="Logo" height="42" />
                         <div class="top-banner__title">Download the app and book your destination on the go!</div>
                     </div>
                     { {-- <div class="col-xs-2">
@@ -21,12 +21,12 @@
                     <div class="burger-item"></div>
                 </div>
             </label>
-            <div class="logo1" style="padding-top: 12px"><a href="/"><img class="logo1" src="/img/logo.jpeg" alt="Logo" height="25" /></a></div>
+            <div class="logo1" style="padding-top: 12px"><a href="/"><img class="logo1" src="/img/logo.png" alt="Logo" height="30" /></a></div>
         </div>
     </div>
     <div class="hidden-sm-down">
         <div class="nav-large">
-            <div class="logo-large"><a href="/"><img src="/img/logo.jpeg" alt="Logo" /></a></div>
+            <div class="logo-large"><a href="/"><img src="/img/logo-md.png" alt="Logo" /></a></div>
             <div class="nav-links"><a class="nav-link active" href="/">HOME</a></div>
             <div class="nav-links"><a class="nav-link active" href="{{route('guestbook.create')}}">BUKU TAMU</a></div>
             <div class="auth-links">
