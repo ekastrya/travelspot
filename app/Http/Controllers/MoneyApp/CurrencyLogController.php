@@ -16,7 +16,7 @@ class CurrencyLogController extends Controller
 
         $idrCurrency = CurrencyLog::latest()->first();
         return response()->json([
-            'idr_value' => $idrCurrency->value * $request->amount
+            'idr_value' => $idrCurrency->idr * $request->amount
         ], 200);
     }
 }
