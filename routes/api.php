@@ -25,3 +25,5 @@ Route::delete('/rss-channel/{id}',	'RssChannelController@deleteChannel');
 Route::get('/rss-feed/{id}', 	'RssFeedController@getFeed');
 Route::put('/rss-feed/{id}', 	'RssFeedController@putFeed');
 Route::delete('/rss-feed/{id}',	'RssFeedController@deleteFeed');
+
+Route::get('/moneyapp/usd-to-idr', 	'MoneyApp\CurrencyLogController');
