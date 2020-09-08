@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,16 +17,3 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get('/rss-channel/{id}', 	'RssChannelController@getChannel');
-Route::put('/rss-channel/{id}', 	'RssChannelController@putChannel');
-Route::post('/rss-channel', 		'RssChannelController@postChannel');
-Route::delete('/rss-channel/{id}',	'RssChannelController@deleteChannel');
-
-Route::get('/rss-feed/{id}', 	'RssFeedController@getFeed');
-Route::put('/rss-feed/{id}', 	'RssFeedController@putFeed');
-Route::delete('/rss-feed/{id}',	'RssFeedController@deleteFeed');
-
-// Route::group(['middleware' => 'cors'], function() {
-    Route::get('/moneyapp/usd-to-idr', 	'MoneyApp\CurrencyLogController');
-// });
