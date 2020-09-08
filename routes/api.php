@@ -26,6 +26,6 @@ Route::get('/rss-feed/{id}', 	'RssFeedController@getFeed');
 Route::put('/rss-feed/{id}', 	'RssFeedController@putFeed');
 Route::delete('/rss-feed/{id}',	'RssFeedController@deleteFeed');
 
-Route::group(['middleware' => 'cors'], function() {
+// Route::group(['middleware' => 'cors'], function() {
     Route::get('/moneyapp/usd-to-idr', 	'MoneyApp\CurrencyLogController');
-});
+// });

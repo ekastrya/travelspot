@@ -37,3 +37,5 @@ Route::get('/compare/clear', 'ComparisonController@clearComparison')->name('comp
 Route::get('/compare/result', 'ComparisonController@getResult')->name('compare.result');
 
 Route::resource('guestbook', 'GuestBookController');
+
+Route::get('/kirim-pesan-api/login', 'KirimPesan\LoginController')->name('apiks.login');
