@@ -14,6 +14,10 @@ class CurrencyLogController extends Controller
             'amount' => 'required'
         ]);
 
+        if(CurrencyLog::count() == 0){
+            CurrencyLog::create(['idr' => 0]);
+        }
+
         $idrCurrency = CurrencyLog::latest()->first();
         return response()->json([
             'idr_value' => $idrCurrency->idr * $request->amount
