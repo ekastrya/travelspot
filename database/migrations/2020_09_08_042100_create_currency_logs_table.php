@@ -13,7 +13,7 @@ class CreateCurrencyLogsTable extends Migration
      */
     public function up()
     {
-        Schema::connection('mysql_moneyapp')->create('currency_logs', function (Blueprint $table) {
+        Schema::connection('sqlite_moneyapp')->create('currency_logs', function (Blueprint $table) {
             $table->id();
             $table->string('idr')->default('0');
             $table->timestamps();
