@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/moneyapp/usd-to-idr',  'MoneyApp\CurrencyLogController');
+Route::get('/convert',  'MoneyApp\CurrencyController@getConvert');
