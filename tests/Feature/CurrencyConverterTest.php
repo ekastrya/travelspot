@@ -13,10 +13,28 @@ class CurrencyConverterTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testGetResponseStatusOkWithCorrectJsonStructure()
     {
         $response = $this->get('/api/convert?access_key=API_KEY&from=USD&to=IDR&amount=1');
+        $response->assertStatus(200)
+            ->assertJsonStructure(  [ 'success'
+                                    , 'query' =>    [ 'from'
+                                                    , 'to'
+                                                    , 'amount'
+                                                    ]
+                                    , 'info' => [ 'timestamp'
+                                                , 'rate'
+                                                ]
+                                    , 'historical'
+                                    , 'date'
+                                    , 'result'
+                                    ]
+                                );
+    }
 
-        $response->assertStatus(200);
+    public function testValidationFailWithoutParameters()
+    {
+        $response = $this->get('/api/convert');
+        $response->assertStatus(302);
     }
 }
