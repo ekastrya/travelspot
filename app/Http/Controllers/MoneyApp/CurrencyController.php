@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class CurrencyController extends Controller
 {
-    //
+    public function getConvert(Request $request)
+    {
+        return response()->json(null, 200);
+    }
 }
